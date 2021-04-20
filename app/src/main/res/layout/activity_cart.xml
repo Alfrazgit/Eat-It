@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F6CD8B"
+        android:id="@+id/cart_toolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/list"
+        android:layout_below="@+id/cart_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/display_total"
+        android:orientation="horizontal"
+        android:layout_below="@+id/list"
+        android:layout_marginVertical="12dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total"
+            android:layout_alignParentLeft="true"
+            android:padding="16dp"
+            android:textColor="#F56"
+            android:text="Total"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_quantity"
+            android:padding="16dp"
+            android:layout_alignParentRight="true"
+            android:text="Rs. 000"
+            android:textColor="#F56"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/display_total"
+        android:onClick="toOrder"
+        android:text="Order Now"
+        android:textColor="#f56"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_layout" />
+
+</RelativeLayout>
